@@ -1,49 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Catalog, pageLoader } from 'catalog';
-import nulogyLogoMark from '../images/nulogy_mark.svg';
-
-const pages = [
-  {
-    path: '/',
-    title: 'Welcome',
-    content: pageLoader(() => import('./README.md'))
-  },
-  {
-    title: 'Foundation',
-    pages: [
-      {
-        path: '/foundation/principles',
-        title: 'Design Principles',
-        content: pageLoader(() => import('./foundation/principles.md'))
-      },
-      {
-        path: '/foundation/personas',
-        title: 'Our Users',
-        content: pageLoader(() => import('./foundation/personas.md'))
-      }
-    ]
-  }
-];
+import { Catalog } from 'catalog';
+import nulogyLogoMark from './static/nulogy_mark.svg';
+import pages from './routes';
 
 const config = {
   title: 'Nulogy Design System',
   logoSrc: nulogyLogoMark,
   useBrowserHistory: true,
   theme: {
-    fontFamily: "'Rubik', serif",
-    fontHeading: "'Rubik', serif",
-    background: '#F3F1F2',
-    textColor: '#58595b',
+    fontFamily: "'Rubik', sans-serif",
+    fontHeading: "'Rubik', sans-serif",
+
+    background: 'white',
+    linkHoverColor: 'black',
+    lightColor: '#F0B41C',
+
+    sidebarColor: '#F8F8F8',
+    sidebarColorText: '#1C68A5',
+    sidebarColorTextActive: '#003B5C',
+
     codeColor: '#1C68A5',
     linkColor: '#1C68A5',
-    linkHoverColor: '#0E77D2',
-    lightColor: '#F0B41C',
-    pageHeadingBackground: '#0E77D2',
-    pageHeadingTextColor: '#fff',
-    sidebarColor: 'white',
-    sidebarColorText: '#1C68A5',
-    sidebarColorTextActive: '#F0B41C'
+    pageHeadingBackground: '#1C68A5',
+    pageHeadingTextColor: '#F8F8F8',
+
+    navBarBackground: 'white'
   }
 };
 
